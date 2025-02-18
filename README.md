@@ -14,7 +14,6 @@ A full-stack web application designed for football enthusiasts, providing real-t
 - 📋 **Teams:** Browse and search for football teams.
 - 🏃‍♂️ **Players:** Access detailed player profiles.
 - 🏆 **Matches:** Stay updated with upcoming and past match details.
-- 🌍 **Areas:** Explore competition areas and venues.
 - 🔍 **Filtering:** Utilize API parameters for efficient data filtering.
 - 📄 **API Documentation:** Comprehensive endpoint details with Swagger.
 - 🧪 **Testing:** Integrated unit tests to ensure robust functionality.
@@ -77,12 +76,11 @@ quasar dev
 | Method | Endpoint         | Description           |
 |--------|------------------|-----------------------|
 | GET    | `/teams`         | Retrieve all teams    |
-| GET    | `/teams/:id`     | Retrieve team details |
+| GET    | `/matches/featured` | Retrieve all featured matches  |
+| GET    | `/competitions`  | Retrieve competitions details |
 | GET    | `/players`       | Retrieve all players  |
 | GET    | `/players/:id`   | Retrieve player details |
 | GET    | `/matches`       | Retrieve all matches  |
-| GET    | `/matches/:id`   | Retrieve match details |
-| GET    | `/areas`         | Retrieve all areas    |
 
 For comprehensive API documentation, visit **`http://localhost:5000/swagger`**
 
@@ -92,14 +90,7 @@ For comprehensive API documentation, visit **`http://localhost:5000/swagger`**
 
 ```bash
 cd backend
-pytest
-```
-
-### Frontend Tests
-
-```bash
-cd frontend
-npm run test
+python -m unittest discover
 ```
 
 ## Docker Deployment
