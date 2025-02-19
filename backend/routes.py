@@ -47,7 +47,7 @@ player_detail_model = api.model("PlayerDetail", {
 })
 
 
-# Competition Routes (Existing)
+# Competition Routes
 @competition_ns.route("/")
 class CompetitionList(Resource):
     def get(self):
